@@ -67,5 +67,8 @@ public class Restaurant {
     public String getName() {
         return name;
     }
-
+    public int calculateCostOfSelectedItems(String... ItemNames){
+    int sum=0;
+    return sum;
+    }
 }

@@ -56,4 +56,8 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void total_order_value_should_be_sum_of_cost_of_the_items(){
+        assertEquals(119+269,restaurant.calculateCostOfSelectedItems("Sweet corn soup","Vegetable lasagne"));
+    }
 }
