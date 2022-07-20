@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -67,8 +68,11 @@ public class Restaurant {
     public String getName() {
         return name;
     }
-    public int calculateCostOfSelectedItems(String... ItemNames){
-    int sum=0;
-    return sum;
+    public int calculateCostOfSelectedItems(String... ItemNames) {
+        int totalCost = 0;
+        for (String ItemName : ItemNames) {
+            totalCost = totalCost + findItemByName(ItemName).getPrice();
+        }
+        return totalCost;
     }
 }
